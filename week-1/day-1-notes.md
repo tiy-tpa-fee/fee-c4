@@ -20,8 +20,8 @@
   - Array
   - Hash
 
+# Resources
 
-# Resources:
 - https://www.apple.com/support/macbasics/
 - http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything
 - https://help.github.com/articles/generating-ssh-keys/
