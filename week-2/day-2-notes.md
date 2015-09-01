@@ -3,7 +3,15 @@
 - GH pages
 - http://codepen.io
 - Atom Linter & Beautify
+  - Install Atom Linter & linter-htmlhint
+  - npm install -g htmlhint
 - Review git a little bit.
 
 - MOAR CSS
-- The Box Model, Box Sizing, The Inline Block Grid
+- classes & ids
+- different types of css selectors (decendant, child, sibling, etc)
+- CSS psuedo selectors
+- The Box Model, Box Sizing
+- Relative/absolute positoning
+
+http://codepen.io/ambethia/pen/ZbExXw
