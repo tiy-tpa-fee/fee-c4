@@ -27,6 +27,7 @@
 ### Adventure Mode
 
 - [ ] Use more complex CSS selectors than we covered in class.
+- [ ] Use at least 24 CSS statements.
 - [ ] Use at least one background image (with CSS) somewhere on the page.
 
 ### Epic Mode
