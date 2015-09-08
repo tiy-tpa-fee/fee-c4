@@ -1,3 +1,4 @@
 - Bootstrap
-- Introduce the DOM
+  - Grid system, common components
+- Introduced the DOM
 - jQuery
