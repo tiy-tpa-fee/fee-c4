@@ -5,3 +5,4 @@ We worked through some more function stuff in class, map, reduce, filter, forEac
 We talked about anonymous functions as callbacks.
 
 Homework was Roshambo (rock-paper-scissors).
+
