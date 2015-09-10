@@ -1,0 +1,35 @@
+body {
+  background-color: #6bd0ff; }
+
+.deck {
+  display: flex;
+  flex-direction: column; }
+  .deck .row {
+    display: flex;
+    flex-direction: row; }
+
+.card .sides {
+  position: relative; }
+
+.card .sides, .card .front, .card .back {
+  width: 80px;
+  height: 80px; }
+
+.card .front, .card .back {
+  border: 10px solid white;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.card .front {
+  line-height: 80px;
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  background-color: #dab4f8; }
+
+.card .back {
+  background-color: #be7cf4; }
+
+.card.revealed .back {
+  display: none; }
