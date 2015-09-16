@@ -43,7 +43,7 @@ As part of your experience at the The Iron Yard, it's important to start establi
 
 The second part of your assignment today is to create a blog (if you don't have one already) and write a blog post about your experiences at The Iron Yard so far. The Iron Yard likes to share these writings from student occasionally, you can [read some examples](http://blog.theironyard.com/category/stories/).
 
-If you don't already have a Blog, I recommend using https://medium.com/. You can also look at services like Tumbler or Blogspot.
+If you don't already have a Blog, I recommend using [Medium](https://medium.com/). You can also look at services like Tumbler or Blogspot.
 
 You might also like to publish the assignement from a few weeks ago, where you wrote about the history of the web.
 
