@@ -1,0 +1,21 @@
+{
+  "name": "hangman",
+  "version": "0.0.0",
+  "homepage": "https://github.com/tiy-tpa-js-q3-2015/notes",
+  "authors": [
+    "Jason L Perry <jasper@ambethia.com>"
+  ],
+  "description": "A game",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3"
+  }
+}

@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+
+body {
+  font-family: "Sigmar One", fantasy;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: #bdf6ff;
+}
+
+.remaining {
+  margin: 1em auto;
+  font-size: 2em;
+  color: #9e0020;
+}
+
+.word {
+  color: #3b006b;
+  font-size: 3em;
+  margin: 1em auto;
+}
+
+.word .letter {
+  margin: 0 4px;
+}
+
+
+button {
+  font-family: "Sigmar One", fantasy;
+}
+
+.input-keys {
+  text-align: center;
+}
+
+.input-keys button {
+  font-size: 1.5em;
+  background-color: #00ff91;
+  color: #006b3d;
+  border: 2px solid #009957;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.input-keys button:focus {
+  outline: none;
+}
+
+.input-keys button:disabled {
+  border-color: #666;
+  color: #666;
+  background-color: #999;
+}
+
+.input-keys .row-1 {
+  margin-left: -0.5em;
+}
+
+.input-keys .row-2 {
+  margin-left: -2em;
+}

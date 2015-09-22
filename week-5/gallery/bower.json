@@ -1,0 +1,23 @@
+{
+  "name": "gallery",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "modernizr": "~2.8.1"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/*",
+        "assets/javascripts/bootstrap.js"
+      ]
+    }
+  },
+  "devDependencies": {
+    "backbone": "~1.2.3",
+    "chai": "~3.3.0",
+    "jquery": "~2.1.4",
+    "mocha": "~2.3.3"
+  }
+}

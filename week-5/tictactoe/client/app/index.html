@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>practicetictac</title>
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+
+</head>
+
+<body>
+  <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <h1>Tic Tac Tizzoe</h1>
+  <div class='actionMsg'>
+    <h2>Yaaahooooooo</h2>
+  </div>
+
+  <div class="hero-unit">
+    <div class='row'>
+      <div data-position='0' class='column'>X</div>
+      <div data-position='1' class='column'>O</div>
+      <div data-position='2' class='column'></div>
+    </div>
+    <div class='row'>
+      <div data-position='3' class='column'></div>
+      <div data-position='4' class='column'>O</div>
+      <div data-position='5' class='column'></div>
+    </div>
+    <div class='row'>
+      <div data-position='6' class='column'></div>
+      <div data-position='7' class='column'>X</div>
+      <div data-position='8' class='column'></div>
+    </div>
+  </div>
+
+  <div class="players">
+    X is <span class="X">X</span>
+    <br>
+    O is <span class="O">O</span>
+  </div>
+
+  <button type="button" name="reset">RESET</button>
+
+  <div class='modal'>
+    <div class="dialog">
+      <div class="message">
+      </div>
+      <form class="setup">
+        <label>Name
+          <input type="text" name="name" value="">
+        </label>
+        <label>
+          <input type="radio" name="player" value="x">X
+        </label>
+        <label for="">
+          <input type="radio" name="player" value="o">O
+        </label>
+        <input type="submit" value="Okay">
+      </form>
+    </div>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
