@@ -1,0 +1,8 @@
+{
+  "name": "github-profile",
+  "private": true,
+  "devDependencies": {
+    "browser-sync": "^2.9.6",
+    "gulp": "^3.9.0"
+  }
+}

@@ -1,0 +1,7 @@
+nav li.active {
+  background-color: black;
+}
+
+nav li.active a {
+  color: white;
+}
