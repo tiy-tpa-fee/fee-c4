@@ -2,7 +2,7 @@ var Router = Backbone.Router.extend({
   routes: {
     '': 'showAbout',
     'about': 'showAbout',
-    ':name/repos/': 'showRepos',
+    ':name/repos': 'showRepos',
     ':name': 'showProfile',
   },
 
