@@ -1,57 +1,42 @@
 var Router = Backbone.Router.extend({
   routes: {
-    '': 'showAbout',
-    'about': 'showAbout',
+    '': 'showIndex',
     ':name/repos': 'showRepos',
     ':name': 'showProfile',
   },
 
-  showAbout: function() {
-    this.showPage('about');
+  showIndex: function() {
+    this.navigate('#ambethia', {
+      trigger: true
+    });
   },
 
   showProfile: function(name) {
-    Promise.all([
-      this.showPage('profile'),
-      $.get('https://api.github.com/users/' + name)
-    ]).then(function(data) {
-      // TODO: Could be better with a Backbone view and template
-      var profile = data[1];
-      $('.content h1').text(profile.name + '\'s Profile');
-      $('.content h2').text(profile.login);
-      $('.content img').attr('src', profile.avatar_url);
-      $('.content .vcard-details .location').text(profile.location);
-    });
+    this.user.set('login', name);
+    this.user.fetch().then(function(data) {
+      $('.content').html(this.profileView.render());
+      $('.nav').html(this.navView.render());
+    }.bind(this));
   },
 
-  showRepos: function(name, foo) {
-    console.log(foo)
-    Promise.all([
-      this.showPage('repos'),
-      $.get('https://api.github.com/users/' + name + '/repos')
-    ]).then(function(data) {
-      _.each(data[1], function (repo) {
-        $('.content ul').append('<li>' + repo.name + '</li>');
-      })
-    });
-  },
-
-  showPage: function(pageName) {
-    document.title = "Github - " + pageName.toUpperCase();
-
-    $('nav li').removeClass('active');
-    $('nav li.' + pageName).addClass('active');
-
-    return $.get(pageName + '.html').then(function(data) {
-      $('.content').html(data);
-    });
+  showRepos: function(name) {
+    this.user.set('login', name);
+    this.user.fetchRepos().then(function(data) {
+      this.reposView.repos = data;
+      $('.nav').html(this.navView.render());
+      $('.content').html(this.reposView.render());
+    }.bind(this));
   },
 
   initialize: function() {
+    this.user = new User({
+      login: '#ambethia'
+    });
+
+    this.profileView = new ProfileView({model: this.user});
+    this.navView = new NavView({model: this.user});
+    this.reposView = new ReposView({repos: []});
+
     Backbone.history.start();
   }
 });
-
-$(function() {
-  var router = new Router();
-})
