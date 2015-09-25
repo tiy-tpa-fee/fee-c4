@@ -1,20 +1,20 @@
 var Router = Backbone.Router.extend({
-  routes: {
+  routes: { // url extensions and their corresponding functions, Router expects routes to be defined
     '': 'showIndex',
-    ':name/repos': 'showRepos',
+    ':name/repos': 'showRepos', //translates as variable/repos
     ':name': 'showProfile',
   },
 
   showIndex: function() {
-    this.navigate('#ambethia', {
-      trigger: true
+    this.navigate('#ambethia', { //navigate is a built in function to the router
+      trigger: true //this actually triggers the function (only needed with .navigate)
     });
   },
 
   showProfile: function(name) {
     this.user.set('login', name);
-    this.user.fetch().then(function(data) {
-      $('.content').html(this.profileView.render());
+    this.user.fetch().then(function(data) { //makes call to githubs api using the url from the model
+      $('.content').html(this.profileView.render()); //sets content dom node to render what the profileView returns
       $('.nav').html(this.navView.render());
     }.bind(this));
   },
@@ -23,13 +23,13 @@ var Router = Backbone.Router.extend({
     this.user.set('login', name);
     this.user.fetchRepos().then(function(data) {
       this.reposView.repos = data;
-      $('.nav').html(this.navView.render());
+      $('.nav').html(this.navView.render()); //returns rendered element and sticks it into page
       $('.content').html(this.reposView.render());
     }.bind(this));
   },
 
-  initialize: function() {
-    this.user = new User({
+  initialize: function() { //when router initialized...
+    this.user = new User({ //user is set to new User (see this.user used in above functions)
       login: 'ambethia' //these become the attributes of the model
     });
 
