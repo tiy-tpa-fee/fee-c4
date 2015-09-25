@@ -30,12 +30,12 @@ var Router = Backbone.Router.extend({
 
   initialize: function() {
     this.user = new User({
-      login: '#ambethia'
+      login: 'ambethia' //these become the attributes of the model
     });
 
     this.profileView = new ProfileView({model: this.user});
     this.navView = new NavView({model: this.user});
-    this.reposView = new ReposView({repos: []});
+    this.reposView = new ReposView({repos: []}); //repos view set to empty array
 
     Backbone.history.start();
   }
