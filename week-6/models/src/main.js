@@ -41,7 +41,6 @@ var ArticleCollection = Backbone.Collection.extend({
   model: Article
 });
 
-
 $(function () {
   var router = new Router();
   Backbone.history.start();
