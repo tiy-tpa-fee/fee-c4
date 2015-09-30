@@ -1,6 +1,7 @@
 import Backbone from 'backbone';
 import $ from 'jquery';
 import _ from 'underscore';
+import moment from 'moment';
 
 import LineView from './LineView';
 
@@ -27,6 +28,7 @@ class CommentsView extends Backbone.View {
         $('ul', self.$el).prepend(`<li>
           <div class="message">${message}</div>
           <div class="author">by ${name}</div>
+          <time>${moment().fromNow()}</time>
         </li>`);
       });
 
@@ -46,7 +48,9 @@ class CommentsView extends Backbone.View {
       $('ul', self.$el).append(`<li>
         <div class="message">${comment.message}</div>
         <div class="author">by ${comment.name}</div>
-        ${(new Date(comment.created_at)).toLocaleString()}
+        <time datetime="${comment.created_at}">
+          ${moment(comment.created_at).fromNow()}
+        </time>
       </li>`);
     });
 
